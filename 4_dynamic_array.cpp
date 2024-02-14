@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string *resizeArray(string *garden_array, int current_size)
+string *resize_array(string *garden_array, int current_size)
 {
   // Create a new dynamic array that is one larger than the old array
   string *new_array = new string[current_size + 1];
@@ -22,6 +22,8 @@ string *resizeArray(string *garden_array, int current_size)
 
 int main()
 {
+  cout << endl;
+
   // Where we started (with a small difference)
   int size = 2;
   string *garden = new string[size];
@@ -42,7 +44,7 @@ int main()
     }
     else
     {
-      garden = resizeArray(garden, size);
+      garden = resize_array(garden, size);
       garden[size] = plant_or_exit;
       size = size + 1;
       print_message(plant_or_exit);
