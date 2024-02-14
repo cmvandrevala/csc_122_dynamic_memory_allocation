@@ -1,5 +1,5 @@
 1: clean
-	g++ 1_initial_garden_tracker.cpp -o 1_initial_garden_tracker
+	g++ 1_initial_garden_tracker.cpp helpers.cpp -o 1_initial_garden_tracker
 	./1_initial_garden_tracker
 
 2: clean
@@ -11,7 +11,7 @@
 	./3_memory_leak
 
 4: clean
-	g++ 4_dynamic_array.cpp -o 4_dynamic_array
+	g++ 4_dynamic_array.cpp helpers.cpp -o 4_dynamic_array
 	./4_dynamic_array
 
 clean:

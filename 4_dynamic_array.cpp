@@ -1,36 +1,23 @@
 #include <iostream>
+#include "helpers.hpp"
 
 using namespace std;
 
-void print_message(string veg)
-{
-  cout << veg << " was added!" << endl;
-}
-
-string *resizeArray(string *array1d, int currentSize)
+string *resizeArray(string *garden_array, int current_size)
 {
   // Create a new dynamic array that is one larger than the old array
-  string *newArray = new string[currentSize + 1];
+  string *new_array = new string[current_size + 1];
 
   // Copy the elements from the original array to the new array
-  for (int i = 0; i < currentSize; i++)
+  for (int i = 0; i < current_size; i++)
   {
-    newArray[i] = array1d[i];
+    new_array[i] = garden_array[i];
   }
 
   // Delete the original array
-  delete[] array1d;
+  delete[] garden_array;
 
-  return newArray;
-}
-
-void print_garden(string *garden, int size)
-{
-  for (int i = 0; i < size; i++)
-  {
-    cout << garden[i] << endl;
-  }
-  cout << endl;
+  return new_array;
 }
 
 int main()
